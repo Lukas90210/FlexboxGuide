@@ -1,0 +1,68 @@
+.container-1 {
+  align-items: flex-start; //pozycja itemu w osi Y. domyślnie jest stretch
+  /*
+        flex-direction: column;  //ustawia wyświetlanie w poziomie lub pionie
+    */
+
+  div {
+    padding: 20px;
+    border: 1px solid #333;
+  }
+
+  .box-1 {
+    flex: 1; //oznacza ile pola zajmuje.
+    order: 3; //oznacza kolejność.
+
+    &:hover {
+      // flex: 2;
+    }
+  }
+  .box-2 {
+    flex: 1;
+    order: 1;
+
+    &:hover {
+      // flex: 2;
+    }
+  }
+  .box-3 {
+    flex: 1;
+    order: 2;
+
+    &:hover {
+      // flex: 2;
+    }
+  }
+}
+
+.container-2 {
+  justify-content: space-between; //pozycja contentu w osi X.
+  div {
+    padding: 20px;
+    border: 1px solid #333;
+  }
+
+  &-box {
+    flex-basis: 25%; //to jest takie width tylko, że flex
+  }
+}
+
+.container-3 {
+  justify-content: space-between; //pozycja contentu w osi X.
+  div {
+    padding: 20px;
+    border: 1px solid #333;
+  }
+
+  &-box {
+    flex-basis: 15%; //to jest takie width tylko, że flex
+  }
+}
+@media screen and (min-width: 768px) {
+  .container-1,
+  .container-2,
+  .container-3 {
+    display: flex;
+    flex-wrap: wrap; //sprawi, że itemy zachowają swoją szerokość i nie będą się zwężać przy zmianie wielkości okna
+  }
+}
